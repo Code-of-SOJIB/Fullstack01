@@ -4,6 +4,8 @@ var router = require('./routes/index');
 var app = express();
 const mongoConfig = require('./config/mongoConfig')
 
+app.use(express.json());
+
 mongoConfig()
 app.use('/',router);
 

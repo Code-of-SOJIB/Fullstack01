@@ -5,6 +5,6 @@ const secureApi = require ('../../middleware/secureApi')
 
 
 
-router.get('/registration',secureApi,registrationController) ;
+router.post('/registration',registrationController) ;
   
 module.exports = router;
