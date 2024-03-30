@@ -1,9 +1,10 @@
 let secureApi = (req,res,next) => {
-    console.log("ami",req.headers)
+  
     
-    if (req.headers.authorizaition == "w70AEQPO5HOJUn") {
+    if (req.headers.authorization == "w70AEQPO5HOJUn") {
         next();
     } else {
+         res.status(401);
         res.send({error: "Invalid api "})
     }
 }
